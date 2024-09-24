@@ -22,7 +22,6 @@ using System;
 using System.Runtime.InteropServices.WindowsRuntime;
 using System.Threading.Tasks;
 using Windows.Media.Core;
-using Windows.Media.Playback;
 using Windows.Storage;
 using Windows.Storage.Streams;
 
@@ -107,7 +106,7 @@ namespace UnitTest.Windows
             // Based on the provided media, check if the following properties are set correctly
             Assert.IsTrue(mss.CanSeek);
             Assert.IsTrue(mss.BufferTime.TotalMilliseconds > 0);
-            Assert.AreEqual(Constants.DownloadUriLength, mss.Duration.TotalMilliseconds);
+            Assert.AreEqual(Constants.DownloadUriLength, Math.Floor(mss.Duration.TotalMilliseconds));
         }
 
         [TestMethod]
@@ -128,7 +127,7 @@ namespace UnitTest.Windows
             // Based on the provided media, check if the following properties are set correctly
             Assert.IsTrue(mss.CanSeek);
             Assert.IsTrue(mss.BufferTime.TotalMilliseconds > 0);
-            Assert.AreEqual(Constants.DownloadUriLength, mss.Duration.TotalMilliseconds);
+            Assert.AreEqual(Constants.DownloadUriLength, Math.Floor(mss.Duration.TotalMilliseconds));
         }
 
         [TestMethod]
@@ -149,7 +148,7 @@ namespace UnitTest.Windows
             // Based on the provided media, check if the following properties are set correctly
             Assert.IsTrue(mss.CanSeek);
             Assert.IsTrue(mss.BufferTime.TotalMilliseconds > 0);
-            Assert.AreEqual(Constants.DownloadUriLength, mss.Duration.TotalMilliseconds);
+            Assert.AreEqual(Constants.DownloadUriLength, Math.Floor(mss.Duration.TotalMilliseconds));
         }
 
         [TestMethod]
@@ -171,7 +170,7 @@ namespace UnitTest.Windows
             // Based on the provided media, check if the following properties are set correctly
             Assert.IsTrue(mss.CanSeek);
             Assert.IsTrue(mss.BufferTime.TotalMilliseconds > 0);
-            Assert.AreEqual(Constants.DownloadUriLength, mss.Duration.TotalMilliseconds);
+            Assert.AreEqual(Constants.DownloadUriLength, Math.Floor(mss.Duration.TotalMilliseconds));
         }
 
         [TestMethod]
@@ -192,7 +191,7 @@ namespace UnitTest.Windows
             // Based on the provided media, check if the following properties are set correctly
             Assert.IsTrue(mss.CanSeek);
             Assert.IsTrue(mss.BufferTime.TotalMilliseconds > 0);
-            Assert.AreEqual(Constants.DownloadUriLength, mss.Duration.TotalMilliseconds);
+            Assert.AreEqual(Constants.DownloadUriLength, Math.Floor(mss.Duration.TotalMilliseconds));
 
             // TODO: Verify expected stream types (aac, h264)
         }

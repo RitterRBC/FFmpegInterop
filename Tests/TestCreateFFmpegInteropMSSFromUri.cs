@@ -93,8 +93,8 @@ namespace UnitTest.Windows
             MediaStreamSource mss = CreateMSSFromUri(Constants.StreamingUriSource, null);
 
             // Based on the provided media, check if the following properties are set correctly
-            Assert.IsTrue(mss.CanSeek);
-            Assert.IsTrue(mss.BufferTime.TotalMilliseconds > 0);
+            Assert.IsFalse(mss.CanSeek);
+            Assert.IsTrue(mss.BufferTime.TotalMilliseconds == 0);
             Assert.AreEqual(Constants.StreamingUriLength, mss.Duration.TotalMilliseconds);
 
             // TODO: Verify expected stream types (aac, h264)

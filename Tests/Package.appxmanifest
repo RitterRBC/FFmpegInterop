@@ -6,7 +6,7 @@
   IgnorableNamespaces="uap mp">
 
   <Identity Name="6e6809d3-d45a-4f55-a8ea-d9dabf5f482c"
-            Publisher="CN=FFmpegInterop"
+            Publisher="CN=Thorsten"
             Version="1.0.0.0" />
 
   <mp:PhoneIdentity PhoneProductId="6e6809d3-d45a-4f55-a8ea-d9dabf5f482c" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
