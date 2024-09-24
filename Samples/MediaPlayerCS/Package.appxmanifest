@@ -8,7 +8,7 @@
 
   <Identity
     Name="MediaPlayerCS"
-    Publisher="CN=FFmpegInterop"
+    Publisher="CN=Thorsten"
     Version="1.0.0.0" />
 
   <mp:PhoneIdentity PhoneProductId="5388ef25-5c75-440f-a383-14d03f338feb" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
